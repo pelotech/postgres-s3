@@ -28,7 +28,7 @@ export () {
   pg_dump -h $DB_HOST \
     --clean \
     -U $DB_USER \
-    -Fc $DB_NAME > $OBJECT_NAME.tar \
+    -Fc $DB_NAME > $OBJECT_NAME \
 
 
   echo "Backing up to $BUCKET as $OBJECT_NAME"

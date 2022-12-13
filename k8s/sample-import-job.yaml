@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: postgres-s3
-          image: pelotech/postgres-s3
+          image: ghcr.io/pelotech/postgres-s3
           env:
             - name: DB_HOST
               value: host
