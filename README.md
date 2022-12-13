@@ -1,4 +1,4 @@
-![main workflow](https://github.com/pelotech/mysqldump-s3/actions/workflows/main.yaml/badge.svg)
+![main workflow](https://github.com/pelotech/postgres-s3/actions/workflows/main.yaml/badge.svg)
 # postgres-s3
 
 Container to export/import postgres via S3
