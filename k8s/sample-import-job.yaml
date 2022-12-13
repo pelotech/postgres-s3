@@ -1,0 +1,33 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: postgres-s3-import
+  namespace: mynamespace
+spec:
+  template:
+    spec:
+      containers:
+        - name: postgres-s3
+          image: pelotech/postgres-s3
+          env:
+            - name: DB_HOST
+              value: host
+            - name: DB_NAME
+              value: db
+            - name: DB_USER
+              value: user
+            - name: PGPASSWORD
+              value: password
+            - name: BUCKET
+              value: s3://buack
+            - name: OBJECT_NAME
+              value: dump.sql
+            - name: AWS_ACCESS_KEY_ID
+              value: "awskey"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "awssecret"
+            - name: AWS_DEFAULT_REGION
+              value: us-west-2
+            - name: ACTION
+              value: import
+      restartPolicy: Never
