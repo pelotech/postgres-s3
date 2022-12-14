@@ -16,7 +16,7 @@
 import () {
   echo "Importing $OBJECT_NAME from $BUCKET to $DB_HOST"
   aws s3 cp $BUCKET/$OBJECT_NAME $OBJECT_NAME
-  pg_restore -d $DB_NAME -Ft -h $DB_HOST -U $DB_USER < $OBJECT_NAME
+  pg_restore -d $DB_NAME -Fc -h $DB_HOST -U $DB_USER < $OBJECT_NAME
 }
 
 export () {
